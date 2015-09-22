@@ -32,9 +32,9 @@ RUN \
     libpng12-dev \
     libgif-dev \
     libtiff5-dev && \
-  wget http://www.imagemagick.org/download/ImageMagick.tar.gz && \
+  wget http://www.imagemagick.org/download/ImageMagick-6.9.2-3.tar.gz && \
   tar xvzf ImageMagick.tar.gz && \
-  cd ImageMagick-6.9.1-2 && \
+  cd ImageMagick-6.9.2-3 && \
   ./configure && \
   make && \
   make install && \
@@ -45,8 +45,8 @@ RUN \
 
 RUN \
   wget https://bitbucket.org/libgd/gd-libgd/downloads/libgd-2.1.1.tar.gz && \
-  tar xvzf libgd-2.1.1.tar.gz && \ 
-  cd libgd-2.1.1 && \ 
+  tar xvzf libgd-2.1.1.tar.gz && \
+  cd libgd-2.1.1 && \
   ./configure && \
   make && \
   make install && \
@@ -83,9 +83,9 @@ RUN \
 RUN \
   apt-get install -y \
     libx11-dev && \
-  wget http://nginx.org/download/nginx-1.6.3.tar.gz && \
-  tar xvzf nginx-1.6.3.tar.gz && \
-  cd nginx-1.6.3 && \
+  wget http://nginx.org/download/nginx-1.9.4.tar.gz && \
+  tar xvzf nginx-1.9.4.tar.gz && \
+  cd nginx-1.9.4 && \
   ./configure --add-module=${WORKDIR}/ngx_small_light && \
   make && \
   make install && \
